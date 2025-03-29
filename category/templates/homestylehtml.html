@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}Dummy{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/homecss.css' %}" type="text/css">
+    </head>
+    <body id="body">
+        <header id="header">
+            <h1>Welcome to All in One Service Manager</h1>
+        </header>
+        
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        
+        <footer id="footer">
+            <div class="footer-content">
+                <img src="{% static 'images/d.png' %}">
+                <p>This is for an educational purpose, not for any commercial activities.<br>
+                    The logo and brand name used is not to violate or to harm others.</p>    
+                <img src="{% static 'images/digital_seva.png' %}">
+            </div>
+        </footer>
+    </body>
+</html>

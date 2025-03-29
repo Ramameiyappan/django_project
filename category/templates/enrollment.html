@@ -1,0 +1,72 @@
+{% extends 'category.html' %}
+{% load static %}
+
+{% block title %}Enrollment{% endblock %}
+{% block head %}
+    <style>
+        body {
+            border: 3px dashed yellowgreen;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container1{
+            position: relative;
+            width: 450px;
+            height: 450px;
+            border-radius: 10px;
+            padding:5px 20px;
+            margin: 5px 20px;
+            background: linear-gradient(to right, #e9ed15, #2bf70c);
+            color: red;
+        }
+        .cont {
+            width: 450px;
+            height: 450px;
+            top: 10px;
+            left: 550px;
+            position: absolute; 
+            overflow: hidden;
+        }
+        .container2 {
+            width: 350px;
+            padding: 20px;
+            background: linear-gradient(to right, #c3baff, #c12a2a);
+            color:blue;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            animation: fadeInOut 15s infinite;
+        }
+
+        .container2:nth-child(1) { animation-delay: 0s; }
+        .container2:nth-child(2) { animation-delay: 3s; }
+        .container2:nth-child(3) { animation-delay: 6s; }
+        .container2:nth-child(4) { animation-delay: 9s; }
+        .container2:nth-child(5) { animation-delay: 12s; }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            10% {opacity: 1; }
+            90% {opacity: 1; }
+            100% {opacity: 0; }
+        }           
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container1">
+        <h3><center>Enter the Enrollment details</center></h3>
+        <form method="post" autocomplete="off">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>           
+    </div> 
+    <div class="cont">
+        <h3>Did You Know?</h3>
+        <div class="container2">UPSC is considered one of the toughest exams in India!</div>
+        <div class="container2">Over 20 lakh students apply for NEET every year!</div>
+        <div class="container2">JEE Advanced has a history of questions inspired by real-world physics!</div>
+        <div class="container2">RRB exams help recruit candidates for over 1 lakh railway jobs in India!</div>
+        <div class="container2">TNPSC was established in 1929, making it one of the oldest recruitment bodies in India!</div>
+    </div>
+{% endblock %}

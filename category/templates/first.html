@@ -1,0 +1,19 @@
+{% extends 'homestylehtml.html' %}
+
+{% block title %}Shop_Name Management{% endblock %}
+
+{% block main %}
+<div class="main-links">
+    <a href="{% url 'electricity_name' %}">Electricity</a> 
+    <a href="{% url 'recharge_name' %}">Recharge/DTH</a> 
+    <a href="{% url 'insurance_name' %}">Insurance/Loan</a>
+    
+    <a href="{% url 'pan_name' %}">Pan</a> 
+    <a href="{% url 'topup_name' %}">Top-Up</a> 
+    <a href="{% url 'travel_name' %}">Travel</a>
+
+    <a href="{% url 'esevai_name' %}">Esevai</a> 
+    <a href="{% url 'bank_name' %}">Bank</a> 
+    <a href="{% url 'enrollment_name' %}">Enrollment</a>
+</div>
+{% endblock %}

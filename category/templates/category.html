@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}Title Name{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/second.css' %}" type="text/css">
+        {% block head %} 
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+        <footer id="footer">
+            <div class="footer-content">
+                <img src="{% static 'images/d.png' %}">
+                <p>This is for an educational purpose, not for any commercial activities.<br>
+                    The logo and brand name used is not to violate or to harm others.
+                    The Number and amount entered is just an reference and not an orginal</p>    
+                <img src="{% static 'images/digital_seva.png' %}">
+            </div>
+        </footer>      
+    </body>
+</html>
