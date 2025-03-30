@@ -21,7 +21,7 @@ Helps in tracking different work types.
 Manages bank transactions.
 Used to track payments going to CSC and other work expenses.
 
-🚀 Features
+💼 Features
 Manage work records efficiently.
 Track 9 different work types in CSC.
 Maintain payment and bank transaction records.
